@@ -1,0 +1,10 @@
+create view in bigquery_sql:
+
+create view my-first-project-practice-6305.repurchase_data_view.hist_table_view as
+select * from my-first-project-practice-6305.repurchase_data_stage_dataset.repurchase_history_table
+
+
+
+create another view in bigquery_sql:
+
+SELECT cid,dt,r_qty,r_amt,GMM_DESC FROM`my-first-project-practice-6305.repurchase_data_view.hist_table_view` WHERE GMM_DESC='BEAUTY' and r_qty>=3 and r_amt>100 LIMIT 50
